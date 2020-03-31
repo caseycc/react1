@@ -5,7 +5,11 @@ function CourseItem(props) {
         <div className="tech-item">
             <p>
                 <span className="tech-name">Tech Name:</span>{props.item.techname}
-                <input type="checkbox" checked={props.item.essential} />
+                <input
+                    type="checkbox"
+                    checked={props.item.essential}
+                    onChange={() => props.handleChange(props.item.id)}
+                    />
                 </p>
         </div>
     )
